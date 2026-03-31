@@ -165,7 +165,7 @@ function BookingModal({ apartment, onClose }) {
                                 <label className="flex items-start gap-2 cursor-pointer">
                                     <input type="checkbox" checked={form.newsletter} onChange={(e) => set("newsletter", e.target.checked)} className="accent-primary mt-0.5 shrink-0" />
                                     <span className="text-xs font-body text-gray-600 leading-relaxed">
-                                        Please keep me updated on Week2Week's latest news and offers.{" "}
+                                        Please keep me updated on Ideal Home's latest news and offers.{" "}
                                         <Link href="/privacy-policy" className="underline text-primary hover:text-primary-dark">
                                             View our privacy policy
                                         </Link>.
@@ -192,6 +192,7 @@ function BookingModal({ apartment, onClose }) {
 export default function ApartmentCard({ apartment }) {
     const images = apartment.images || (apartment.image ? [apartment.image] : []);
     const [current, setCurrent] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
     const getImgSrc = (img) => (typeof img === "string" ? img : img?.src);
@@ -200,18 +201,35 @@ export default function ApartmentCard({ apartment }) {
     const next = useCallback(() => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1)), [images.length]);
 
     useEffect(() => {
-        if (images.length <= 1) return;
-        const timer = setInterval(next, 3000);
-        return () => clearInterval(timer);
-    }, [next, images.length]);
+        if (images.length <= 1 || isHovered) return;
+
+        // Synchronize with other carousels by aligning with the 5-second system clock marks
+        const now = Date.now();
+        const delay = 5000 - (now % 5000);
+
+        let interval;
+        const timeout = setTimeout(() => {
+            next();
+            interval = setInterval(next, 5000);
+        }, delay);
+
+        return () => {
+            clearTimeout(timeout);
+            clearInterval(interval);
+        };
+    }, [next, images.length, isHovered]);
 
     return (
         <>
             <div className="bg-white border border-gray-200 rounded-lg overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow duration-300 mb-8 max-w-5xl mx-auto">
                 {/* Carousel */}
-                <div className="relative w-full md:w-[45%] aspect-[16/10] md:aspect-auto overflow-hidden">
+                <div
+                    className="relative w-full md:w-[45%] aspect-[16/10] md:aspect-auto overflow-hidden"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
                     <div
-                        className="flex h-full transition-transform duration-500 ease-in-out"
+                        className="flex h-full transition-transform duration-1000 ease-in-out"
                         style={{
                             width: `${images.length * 100}%`,
                             transform: `translateX(-${current * (100 / images.length)}%)`,

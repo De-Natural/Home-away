@@ -1,5 +1,4 @@
-// import cert1 from '../../assets/images/certificate1.jpg'
-// import cert2 from '../../assets/images/certificate2.avif'
+
 import cert3 from '../../assets/images/certificate3.webp'
 import cert4 from '../../assets/images/certificate4.webp'
 import Image from 'next/image';

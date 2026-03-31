@@ -145,7 +145,7 @@ export default function Footer() {
                         <Link href="/">
                             <Image
                                 src={logo}
-                                alt="Week2Week Serviced Apartments"
+                                alt="ideal home Serviced Apartments"
                                 className="h-12 md:h-16 lg:h-20 w-auto"
                                 width={80}
                                 height={80}

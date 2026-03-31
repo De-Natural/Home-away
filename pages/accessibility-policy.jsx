@@ -32,7 +32,7 @@ export default function AccessibilityPolicy() {
     return (
         <>
             <Head>
-                <title>Accessibility Policy | Week2Week Serviced Apartments</title>
+                <title>Accessibility Policy | Ideal home Serviced Apartments</title>
                 <meta name="description" content="Week2Week's commitment to making our website and services accessible to all users, including those with disabilities." />
             </Head>
 
