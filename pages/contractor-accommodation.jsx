@@ -20,7 +20,7 @@ export default function ContractorAccommodation() {
     return (
         <>
             <Head>
-                <title>Contractor Accommodation & Serviced Apartments | Week2Week</title>
+                <title>Contractor Accommodation & Serviced Apartments | Ideal home</title>
             </Head>
 
             {/* Hero Section */}

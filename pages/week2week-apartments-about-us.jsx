@@ -18,7 +18,7 @@ export default function AboutUs() {
     return (
         <>
             <Head>
-                <title>Who We Are | Week2Week Serviced Apartments</title>
+                <title>Who We Are | Ideal home Serviced Apartments</title>
             </Head>
 
             {/* Spacer for fixed header */}

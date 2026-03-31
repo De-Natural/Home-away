@@ -1,6 +1,7 @@
-// LatestNews.jsx
-// Blog / Latest News section with article cards.
 
+// import blog1 from '../../assets/images/blog1.webp'
+// import blog2 from '../../assets/images/blog2.webp'
+import blog3 from '../../assets/images/FreelanceCreative PortfolioWebsite(4).png'
 import Link from "next/link";
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
@@ -11,7 +12,7 @@ const articles = [
         excerpt:
             "Discover the top attractions and activities in Newcastle upon Tyne, from cultural landmarks to vibrant nightlife.",
         image:
-            "https://week2week.co.uk/wp-content/uploads/2017/08/serviced-apartments-cta.jpg",
+            blog3.src,
         href: "/blog",
     },
     {

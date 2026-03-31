@@ -1,6 +1,3 @@
-// WelcomeSection.jsx
-// "Serviced Apartments Newcastle" intro section with description text
-// and "Celebrating 25 Years" badge on the right.
 
 import SectionHeading from "../ui/SectionHeading";
 
@@ -15,7 +12,7 @@ export default function WelcomeSection() {
                             Serviced Apartments Newcastle
                         </SectionHeading>
                         <p className="text-center text-body-text font-body text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-                            Week2Week Serviced Apartments is a family run business based in
+                            Ideal home Serviced Apartments is a family run business based in
                             Newcastle City Centre. Founded in 2000, we are the original
                             serviced apartments provider in Newcastle upon Tyne. We provide you
                             with the luxury of a hotel suite with the amenities you would

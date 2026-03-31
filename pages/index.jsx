@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Newcastle | Week2Week</title>
+                <title>Serviced Apartments Newcastle | Ideal home</title>
             </Head>
 
             {/* Spacer for fixed header */}

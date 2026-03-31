@@ -144,15 +144,31 @@ function GoogleG() {
     );
 }
 
-const VISIBLE = 4; // cards visible at once on desktop
 const AUTO_INTERVAL = 4000; // ms between auto-slides
 
 export default function Testimonials() {
     const [current, setCurrent] = useState(0);
+    const [visible, setVisible] = useState(4);
     const [expanded, setExpanded] = useState(null);
     const timerRef = useRef(null);
     const total = reviews.length;
-    const maxStart = total - VISIBLE;
+
+    useEffect(() => {
+        const updateVisible = () => {
+            if (window.innerWidth < 768) setVisible(1);
+            else if (window.innerWidth < 1024) setVisible(2);
+            else setVisible(4);
+        };
+        updateVisible();
+        window.addEventListener("resize", updateVisible);
+        return () => window.removeEventListener("resize", updateVisible);
+    }, []);
+
+    const maxStart = Math.max(0, total - visible);
+
+    useEffect(() => {
+        setCurrent((prev) => Math.min(prev, maxStart));
+    }, [maxStart]);
 
     const startTimer = () => {
         clearInterval(timerRef.current);
@@ -164,7 +180,7 @@ export default function Testimonials() {
     useEffect(() => {
         startTimer();
         return () => clearInterval(timerRef.current);
-    }, []);
+    }, [maxStart]);
 
     const go = (dir) => {
         setCurrent((prev) => {
@@ -178,7 +194,7 @@ export default function Testimonials() {
 
     return (
         <section className="py-10 md:py-16 bg-light-gray overflow-hidden">
-            <div className=" mx-auto px-6">
+            <div className="mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12">
 
                     {/* ── Left panel: rating summary ── */}
@@ -207,24 +223,24 @@ export default function Testimonials() {
                     </div>
 
                     {/* ── Carousel ── */}
-                    <div className="relative flex-1 flex items-center gap-2 min-w-0">
+                    <div className="relative flex-1 w-full min-w-0">
 
-                        {/* Prev arrow */}
+                        {/* Arrows Contained in Carousel */}
                         <button
                             onClick={() => go(-1)}
                             aria-label="Previous reviews"
-                            className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-border-gray shadow flex items-center justify-center hover:bg-gray-50 transition z-10"
+                            className="absolute -left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-border-gray shadow-lg flex items-center justify-center hover:bg-gray-50 transition z-10 hidden md:flex"
                         >
-                            <svg className="w-4 h-4 text-primary-dark" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-primary-dark" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                             </svg>
                         </button>
 
                         {/* Track */}
-                        <div className="overflow-hidden flex-1 min-w-0">
+                        <div className="overflow-hidden w-full">
                             <div
                                 className="flex gap-4 transition-transform duration-500 ease-in-out"
-                                style={{ transform: `translateX(calc(-${current} * (100% / ${VISIBLE}) - ${current} * (1rem / ${VISIBLE})))` }}
+                                style={{ transform: `translateX(calc(-${current} * (100% / ${visible}) - ${current} * (1rem / ${visible})))` }}
                             >
                                 {reviews.map((review, i) => {
                                     const isExpanded = expanded === i;
@@ -237,7 +253,7 @@ export default function Testimonials() {
                                         <div
                                             key={i}
                                             className="bg-white rounded-xl p-5 shadow-sm border border-border-gray flex-shrink-0 flex flex-col"
-                                            style={{ width: `calc((100% - ${VISIBLE - 1}rem) / ${VISIBLE})` }}
+                                            style={{ width: `calc((100% - ${visible - 1}rem) / ${visible})` }}
                                         >
                                             {/* Header: avatar + name + Google G */}
                                             <div className="flex items-center justify-between gap-2 mb-3">
@@ -277,16 +293,35 @@ export default function Testimonials() {
                             </div>
                         </div>
 
-                        {/* Next arrow */}
                         <button
                             onClick={() => go(1)}
                             aria-label="Next reviews"
-                            className="flex-shrink-0 w-8 h-8 rounded-full bg-white border border-border-gray shadow flex items-center justify-center hover:bg-gray-50 transition z-10"
+                            className="absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-border-gray shadow-lg flex items-center justify-center hover:bg-gray-50 transition z-10 hidden md:flex"
                         >
-                            <svg className="w-4 h-4 text-primary-dark" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                            <svg className="w-5 h-5 text-primary-dark" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                             </svg>
                         </button>
+
+                        {/* Mobile Controls (below carousel) */}
+                        <div className="flex justify-center gap-4 mt-6 md:hidden">
+                            <button
+                                onClick={() => go(-1)}
+                                className="w-10 h-10 rounded-full bg-white border border-border-gray shadow flex items-center justify-center"
+                            >
+                                <svg className="w-5 h-5 text-primary-dark" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button
+                                onClick={() => go(1)}
+                                className="w-10 h-10 rounded-full bg-white border border-border-gray shadow flex items-center justify-center"
+                            >
+                                <svg className="w-5 h-5 text-primary-dark" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
