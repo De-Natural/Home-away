@@ -1,6 +1,7 @@
-
+import { useState } from 'react';
 import logo from '../../assets/images/companylogo.jpg'
 import { Icon } from '@iconify/react';
+import toast from "react-hot-toast";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -12,16 +13,24 @@ import {
 
 function SocialIcon({ icon }) {
     const icons = {
-        facebook: <Icon icon="logos:facebook" className='w-10 h-10'/>,
-        x: <Icon icon="prime:twitter" className='w-5 h-5 text-white'/>,
-        linkedin: <Icon icon="skill-icons:linkedin" className='w-10 h-10 rounded-full'/>,
-        instagram: <Icon icon="skill-icons:instagram" className='w-10 h-10 rounded-full'/>,
-        tiktok: <Icon icon="ph:tiktok-logo-thin" className='w-8 h-8'/>,
+        facebook: <Icon icon="mdi:facebook" className="w-8 h-8" />,
+        x: <Icon icon="fa7-brands:x-twitter" className="w-8 h-8" />,
+        linkedin: <Icon icon="ri:linkedin-fill" className="w-8 h-8" />,
+        instagram: <Icon icon="mdi:instagram" className="w-8 h-8" />,
+        tiktok: <Icon icon="ic:baseline-tiktok" className="w-8 h-8" />,
     };
     return icons[icon] || null;
 }
 
 export default function Footer() {
+    const [newsletterEmail, setNewsletterEmail] = useState("");
+
+    const handleNewsletterSubmit = () => {
+        if (!newsletterEmail) return;
+        toast.success("Thank you for signing up for our newsletter!");
+        setNewsletterEmail("");
+    };
+
     return (
         <footer className="bg-white">
             {/* Main Footer */}
@@ -106,22 +115,15 @@ export default function Footer() {
                                     <input
                                         type="email"
                                         placeholder="Email address"
+                                        value={newsletterEmail}
+                                        onChange={(e) => setNewsletterEmail(e.target.value)}
                                         className="flex-1 border border-border-gray px-3 py-2 text-sm font-body rounded-l focus:outline-none focus:border-primary"
                                     />
-                                    <button className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-r transition-colors">
-                                        <svg
-                                            className="w-4 h-4"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            viewBox="0 0 24 24"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                                            />
-                                        </svg>
+                                    <button
+                                        onClick={handleNewsletterSubmit}
+                                        className="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-r transition-colors"
+                                    >
+                                        <Icon icon="famicons:send-sharp" width="24" height="24" />
                                     </button>
                                 </div>
                                 <label className="flex items-start gap-2 mt-3 text-xs text-body-text">
@@ -157,14 +159,14 @@ export default function Footer() {
                     <div className="border-t border-border-gray mb-6" />
 
                     {/* Social Icons */}
-                    <div className="flex justify-center gap-3 mb-6">
+                    <div className="flex justify-center gap-5 mb-6">
                         {socialLinks.map((social) => (
                             <a
                                 key={social.icon}
                                 href={social.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-full bg-primary-dark hover:bg-primary text-white flex items-center justify-center transition-colors"
+                                className="w-12 h-12 rounded-full border-2 border-primary text-white bg-primary hover:bg-[#3b5998] hover:text-white flex items-center justify-center transition-colors duration-300"
                                 aria-label={social.label}
                             >
                                 <SocialIcon icon={social.icon} />

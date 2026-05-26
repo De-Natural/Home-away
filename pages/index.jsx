@@ -8,6 +8,7 @@ import WelcomeSection from "../components/sections/WelcomeSection";
 import PrimeLocations from "../components/sections/PrimeLocations";
 import MapSection from "../components/sections/MapSection";
 import WhyChoose from "../components/sections/WhyChoose";
+import SectionHeading from "../components/ui/SectionHeading";
 import Testimonials from "../components/sections/Testimonials";
 import PropertyManagement from "../components/sections/PropertyManagement";
 import Accreditations from "../components/sections/Accreditations";
@@ -22,13 +23,15 @@ export default function Home() {
 
             {/* Spacer for fixed header */}
             <div className="h-[100px] md:h-[120px]" />
-
+            <div className="h-32 w-32 rounded-full fixed bottom-4 left-4 z-50 bg-primary-dark text-white flex items-center justify-center"> 
+                <p className="text-center font-semibold">Flexible <br /> Cancellation</p>
+            </div>
             <HeroSection />
             <IconBar />
             <WelcomeSection />
             <PrimeLocations />
             <MapSection />
-            <WhyChoose />
+            <WhyChoose heading={<SectionHeading className="mb-10">Why Choose Ideal home</SectionHeading>} />
             <Testimonials />
             <PropertyManagement />
             <Accreditations />

@@ -1,20 +1,44 @@
 import Head from "next/head";
 import { useState } from "react";
+import toast from "react-hot-toast";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
 import imageContact from "../assets/images/contact us.png";
 
 export default function Contact() {
     const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
-    const [submitted, setSubmitted] = useState(false);
 
     function handleChange(e) {
         setForm({ ...form, [e.target.name]: e.target.value });
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        setSubmitted(true);
+
+        const toastId = toast.loading("Sending your message...");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(form),
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                toast.success("Thank you! Your message has been sent successfully.", {
+                    id: toastId,
+                    duration: 5000,
+                });
+                setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+            } else {
+                toast.error(data.message || "Failed to send message.", { id: toastId });
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            toast.error("An error occurred. Please try again.", { id: toastId });
+        }
     }
 
     const contactMethods = [
@@ -22,6 +46,12 @@ export default function Contact() {
         { icon: "✉️", label: "Email", value: "idealhom046@gmail.com", note: "We aim to reply within 24 hours" },
         { icon: "📍", label: "Address", value: "No 31 copper walks way walsall", note: "" },
     ];
+
+    // const contactMethods = [
+    //     { icon: <Icon icon="solar:phone-linear" width="48" height="48" />, label: "Hotline", value: "+44 7405 076376", note: "Mon – Fri, 9am – 5pm" },
+    //     { icon: <Icon icon="fxemoji:email" width="48" height="48" />, label: "Email", value: "idealhom046@gmail.com", note: "We aim to reply within 24 hours" },
+    //     { icon: <Icon icon="solar:map-outline" width="48" height="48" />, label: "Address", value: "No 31 copper walks way walsall", note: "" },
+    // ];
 
     return (
         <>
@@ -66,98 +96,90 @@ export default function Contact() {
                     {/* Contact Form */}
                     <div className="max-w-3xl mx-auto">
                         <h2 className="font-heading text-2xl font-bold text-primary-dark text-center mb-10 italic">Send Us a Message</h2>
-                        {submitted ? (
-                            <div className="bg-green-50 border border-green-200 text-green-800 rounded-sm p-10 text-center space-y-4">
-                                <div className="text-5xl">✅</div>
-                                <h3 className="font-heading text-xl font-bold">Thank You!</h3>
-                                <p className="font-body text-sm">Your message has been sent. We&apos;ll get back to you within 24 hours.</p>
-                            </div>
-                        ) : (
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-name">Full Name *</label>
-                                        <input
-                                            id="contact-name"
-                                            name="name"
-                                            type="text"
-                                            required
-                                            value={form.name}
-                                            onChange={handleChange}
-                                            className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors"
-                                            placeholder="Your full name"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-email">Email Address *</label>
-                                        <input
-                                            id="contact-email"
-                                            name="email"
-                                            type="email"
-                                            required
-                                            value={form.email}
-                                            onChange={handleChange}
-                                            className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors"
-                                            placeholder="your@email.com"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-phone">Phone Number</label>
-                                        <input
-                                            id="contact-phone"
-                                            name="phone"
-                                            type="tel"
-                                            value={form.phone}
-                                            onChange={handleChange}
-                                            className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors"
-                                            placeholder="07700 000000"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-subject">Subject *</label>
-                                        <select
-                                            id="contact-subject"
-                                            name="subject"
-                                            required
-                                            value={form.subject}
-                                            onChange={handleChange}
-                                            className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors bg-white"
-                                        >
-                                            <option value="">Select a subject...</option>
-                                            <option>General Enquiry</option>
-                                            <option>Apartment Availability</option>
-                                            <option>Group / Corporate Booking</option>
-                                            <option>Contractor Accommodation</option>
-                                            <option>Property Management</option>
-                                            <option>Feedback / Complaint</option>
-                                        </select>
-                                    </div>
-                                </div>
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-message">Message *</label>
-                                    <textarea
-                                        id="contact-message"
-                                        name="message"
-                                        rows={6}
+                                    <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-name">Full Name *</label>
+                                    <input
+                                        id="contact-name"
+                                        name="name"
+                                        type="text"
                                         required
-                                        value={form.message}
+                                        value={form.name}
                                         onChange={handleChange}
-                                        className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors resize-none"
-                                        placeholder="Tell us about your requirements, preferred dates, number of guests, etc."
+                                        className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors"
+                                        placeholder="Your full name"
                                     />
                                 </div>
-                                <div className="text-center">
-                                    <button
-                                        type="submit"
-                                        className="inline-block bg-primary text-white font-heading font-bold uppercase tracking-widest text-xs px-10 py-4 rounded-sm hover:bg-primary-dark transition-colors"
-                                    >
-                                        Send Message
-                                    </button>
+                                <div>
+                                    <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-email">Email Address *</label>
+                                    <input
+                                        id="contact-email"
+                                        name="email"
+                                        type="email"
+                                        required
+                                        value={form.email}
+                                        onChange={handleChange}
+                                        className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors"
+                                        placeholder="your@email.com"
+                                    />
                                 </div>
-                            </form>
-                        )}
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-phone">Phone Number</label>
+                                    <input
+                                        id="contact-phone"
+                                        name="phone"
+                                        type="tel"
+                                        value={form.phone}
+                                        onChange={handleChange}
+                                        className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors"
+                                        placeholder="07700 000000"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-subject">Subject *</label>
+                                    <select
+                                        id="contact-subject"
+                                        name="subject"
+                                        required
+                                        value={form.subject}
+                                        onChange={handleChange}
+                                        className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors bg-white"
+                                    >
+                                        <option value="">Select a subject...</option>
+                                        <option>General Enquiry</option>
+                                        <option>Apartment Availability</option>
+                                        <option>Group / Corporate Booking</option>
+                                        <option>Contractor Accommodation</option>
+                                        <option>Property Management</option>
+                                        <option>Feedback / Complaint</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label className="block font-body text-sm font-semibold text-primary-dark mb-2" htmlFor="contact-message">Message *</label>
+                                <textarea
+                                    id="contact-message"
+                                    name="message"
+                                    rows={6}
+                                    required
+                                    value={form.message}
+                                    onChange={handleChange}
+                                    className="w-full border border-gray-300 rounded-sm px-4 py-3 font-body text-sm focus:outline-none focus:border-primary transition-colors resize-none"
+                                    placeholder="Tell us about your requirements, preferred dates, number of guests, etc."
+                                />
+                            </div>
+                            <div className="text-center">
+                                <button
+                                    type="submit"
+                                    className="inline-block bg-primary text-white font-heading font-bold uppercase tracking-widest text-xs px-10 py-4 rounded-sm hover:bg-primary-dark transition-colors"
+                                >
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

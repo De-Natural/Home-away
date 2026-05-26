@@ -19,26 +19,34 @@ export default function Header() {
             </div>
 
             {/* Main Header Row */}
-            <div className="max-w-container mx-auto px-4">
-                <div className="flex items-center justify-between py-3 md:py-4">
+            <div className="w-full mx-auto px-4">
+                <div className="w-full flex items-center justify-between py-3 md:py-4">
                     {/* Left: Reservation Hotline */}
-                    <div className="hidden md:flex items-center gap-3 flex-1">
-                        <div className="text-primary-dark">
-                            <Icon icon="mdi:phone" width="24" height="24" />
+                    <div className="hidden md:flex items-center justify-around gap-3 flex-1">
+                        <div className="flex items-center gap-2 p-4">
+                            <div className="text-primary-dark">
+                                <Icon icon="line-md:chat-round" width="24" height="24" />
+                            </div>
+                            <div>
+                                <a
+                                    href="tel:+441912813129"
+                                    className="text-primary-dark hover:text-primary transition-colors p-4"
+                                >
+                                    <span className="block text-xs font-body text-body-text">
+                                        Reservation hotline
+                                    </span>
+                                    <span className="block text-sm font-semibold font-heading">
+                                        +44 7405 076376
+                                    </span>
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <a
-                                href="tel:+441912813129"
-                                className="text-primary-dark hover:text-primary transition-colors"
-                            >
-                                <span className="block text-xs font-body text-body-text">
-                                    Reservation hotline
-                                </span>
-                                <span className="block text-sm font-semibold font-heading">
-                                    +44 7405 076376
-                                </span>
-                            </a>
-                        </div>
+                        <Link
+                            href="/property-investment-2"
+                            className="inline-block bg-transparent hover:bg-primary-dark text-primary-dark hover:text-white text-xs md:text-sm font-semibold font-heading py-2 md:py-3 px-3 md:px-5 rounded-3xl border-2 border-primary transition-colors"
+                        >
+                            Let your Apartment
+                        </Link>
                     </div>
 
                     {/* Center: Logo */}
@@ -58,7 +66,7 @@ export default function Header() {
                     <div className="flex items-center gap-2 md:gap-4 flex-1 justify-end">
                         <Link
                             href="/contact"
-                            className="hidden sm:inline-block bg-primary hover:bg-primary-dark text-white text-xs md:text-sm font-semibold font-heading py-2 px-3 md:px-5 rounded transition-colors"
+                            className="hidden sm:inline-block bg-primary hover:bg-primary-dark text-white text-xs md:text-sm font-semibold font-heading py-3 px-6 md:px-8 rounded-3xl transition-colors"
                         >
                             <span className="hidden lg:inline">Enquire </span>Now
                         </Link>
