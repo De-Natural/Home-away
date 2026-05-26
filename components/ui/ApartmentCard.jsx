@@ -1,8 +1,7 @@
-// ApartmentCard.jsx
-// Listing card with image carousel, "Read More" navigation, and "Book Now" modal.
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 // ─── Booking Modal ────────────────────────────────────────────────────────────
 function BookingModal({ apartment, onClose }) {
@@ -21,6 +20,9 @@ function BookingModal({ apartment, onClose }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSent(true);
+        toast.success(`Booking inquiry for ${apartment.title} sent successfully!`, {
+            duration: 5000,
+        });
     };
 
     // Close on Escape key

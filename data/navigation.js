@@ -23,7 +23,7 @@ export const whatWeDo = [
     },
     { label: "Corporate Travel", href: "/corporate-stays" },
     { label: "Newcastle Hospital Stays", href: "/hospital-stays-2" },
-    { label: "Week2Week Perks", href: "/guest-perks" },
+    { label: "Ideal home Perks", href: "/guest-perks" },
     { label: "City Breaks & Vacations", href: "/staycation-apartments-newcastle" },
     { label: "Property Management", href: "/property-investment-2" },
 ];
@@ -55,7 +55,7 @@ export const footerApartments = [
 export const footerCompany = [
     { label: "Who We Are", href: "/week2week-apartments-about-us" },
     { label: "Serviced Apartments", href: "/serviced-apartments" },
-    { label: "Week2Week's FAQ's", href: "/feedback-form-and-reviews" },
+    { label: "Ideal home's FAQ's", href: "/feedback-form-and-reviews" },
     { label: "Contractor Accommodation", href: "/contractor-accommodation" },
     { label: "Newcastle Hospital Stays", href: "/hospital-stays-2" },
     {

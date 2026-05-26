@@ -14,6 +14,7 @@ import Bed4 from "../assets/images/bedroom4.jpg";
 import Bed5 from "../assets/images/bedroom5.jpg";
 import Bed6 from "../assets/images/bedroom6.jpg";
 import { Icon } from "@iconify/react";
+import WhyChoose from "../components/sections/WhyChoose";
 
 export default function ServicedApartments() {
     const [activeTab, setActiveTab] = useState("Leisure");
@@ -62,16 +63,7 @@ export default function ServicedApartments() {
         }
     ];
 
-    const amenities = [
-        { name: "Free Wifi", icon: <Icon icon="fluent-color:wifi-20" width="48" height="48" /> },
-        { name: "Utilities Included", icon: "💡" },
-        { name: "Fully Equipped Kitchen", icon: <Icon icon="fa7-solid:kitchen-set" width="48" height="48" /> },
-        { name: "Modern Bathrooms", icon: "🛁" },
-        { name: "Housekeeping", icon: <Icon icon="openmoji:broom" width="48" height="48" /> },
-        { name: "Parking Available", icon: <Icon icon="fluent-emoji-flat:minibus" width="48" height="48" /> },
-        { name: "Fully Furnished", icon: <Icon icon="fluent-emoji-flat:bed" width="48" height="48" /> },
-        { name: "24/7 Support", icon: <Icon icon="glyphs-poly:phone-add" width="48" height="48" /> }
-    ];
+
 
     const instagramImages = [
         Bed2, Bed3, Bed4, Bed5, Bed6
@@ -82,7 +74,7 @@ export default function ServicedApartments() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Newcastle | Week2Week</title>
+                <title>Serviced Apartments Newcastle | Ideal home</title>
             </Head>
 
             {/* Hero Banner */}
@@ -103,7 +95,7 @@ export default function ServicedApartments() {
 
             {/* Intro Section */}
             <section className="max-w-4xl mx-auto px-6 text-center pb-20 relative">
-                <SectionHeading title="Beautiful Serviced Apartments" />
+                <SectionHeading>Beautiful Serviced Apartments</SectionHeading>
                 <div className="space-y-6 text-body-text font-body text-sm md:text-base leading-relaxed text-gray-600 mt-8">
                     <p>
                         Serviced apartments are what we do. That perfect mix of the cleanliness and intimacy you
@@ -162,22 +154,14 @@ export default function ServicedApartments() {
                 </div>
             </section>
 
-            {/* Amenities Grid */}
-            <section className="py-20 bg-white">
-                <div className="max-w-container mx-auto px-6">
-                    <SectionHeading title="Fully Loaded Apartments" />
-                    <div className="grid grid-cols-2 md:grid-cols-4 mt-16 border-t border-l border-gray-200">
-                        {amenities.map((item, idx) => (
-                            <div key={idx} className="border-b border-r border-gray-200 p-10 flex flex-col items-center justify-center text-center group hover:bg-light-gray transition-colors">
-                                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform">
-                                    {item.icon}
-                                </div>
-                                <h4 className="font-heading text-sm font-semibold text-primary-dark">{item.name}</h4>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Why Choose Section */}
+            <WhyChoose
+                heading={
+                    <SectionHeading className="mb-10">
+                        Fully Loaded Apartments
+                    </SectionHeading>
+                }
+            />
 
             {/* Instagram Feed */}
             <section className="pt-10 pb-20">
