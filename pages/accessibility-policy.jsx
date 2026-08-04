@@ -4,7 +4,7 @@ import SectionHeading from "../components/ui/SectionHeading";
 const sections = [
     {
         title: "Our Commitment to Accessibility",
-        content: "Week2Week Serviced Apartments is committed to ensuring that our website and services are accessible to everyone, including people with disabilities. We strive to meet and exceed the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA and continually work to improve the accessibility of our digital content.",
+        content: "Ideal home Serviced Apartments is committed to ensuring that our website and services are accessible to everyone, including people with disabilities. We strive to meet and exceed the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA and continually work to improve the accessibility of our digital content.",
     },
     {
         title: "What We've Done",
@@ -20,7 +20,7 @@ const sections = [
     },
     {
         title: "Feedback & Contact",
-        content: "We welcome feedback on the accessibility of our website. If you experience any barriers to accessing our content or services, or if you require information in an alternative format, please contact us at: hello@week2week.co.uk or call 0191 261 4600. We aim to respond to accessibility enquiries within 5 working days.",
+        content: "We welcome feedback on the accessibility of our website. If you experience any barriers to accessing our content or services, or if you require information in an alternative format, please contact us at: hello@idealhome.co.uk or call 0191 261 4600. We aim to respond to accessibility enquiries within 5 working days.",
     },
     {
         title: "Enforcement Procedure",
@@ -33,7 +33,7 @@ export default function AccessibilityPolicy() {
         <>
             <Head>
                 <title>Accessibility Policy | Ideal home Serviced Apartments</title>
-                <meta name="description" content="Week2Week's commitment to making our website and services accessible to all users, including those with disabilities." />
+                <meta name="description" content="Ideal home's commitment to making our website and services accessible to all users, including those with disabilities." />
             </Head>
 
             {/* Hero */}

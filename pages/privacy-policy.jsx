@@ -4,7 +4,7 @@ import SectionHeading from "../components/ui/SectionHeading";
 const sections = [
     {
         title: "1. Who We Are",
-        content: "Week2Week Serviced Apartments ('we', 'us', 'our') is the data controller for the personal information collected through this website and our booking services. Our registered address is: Collingwood Buildings, 38 Collingwood Street, Newcastle upon Tyne, NE1 1JF.",
+        content: "Ideal home Serviced Apartments ('we', 'us', 'our') is the data controller for the personal information collected through this website and our booking services. Our registered address is: Collingwood Buildings, 38 Collingwood Street, Newcastle upon Tyne, NE1 1JF.",
     },
     {
         title: "2. What Data We Collect",
@@ -28,7 +28,7 @@ const sections = [
     },
     {
         title: "7. Your Rights",
-        content: "Under UK GDPR, you have the right to: access the personal data we hold about you; correct inaccurate data; request erasure of your data; object to processing; restrict processing; and data portability. To exercise any of these rights, please contact us at hello@week2week.co.uk.",
+        content: "Under UK GDPR, you have the right to: access the personal data we hold about you; correct inaccurate data; request erasure of your data; object to processing; restrict processing; and data portability. To exercise any of these rights, please contact us at hello@idealhome.co.uk.",
     },
     {
         title: "8. Cookies",
@@ -40,7 +40,7 @@ const sections = [
     },
     {
         title: "10. Contact Us",
-        content: "If you have any questions about this Privacy Policy or wish to exercise your rights, please contact our Data Protection contact at: hello@week2week.co.uk or by writing to us at Collingwood Buildings, 38 Collingwood Street, Newcastle upon Tyne, NE1 1JF.",
+        content: "If you have any questions about this Privacy Policy or wish to exercise your rights, please contact our Data Protection contact at: hello@idealhome.co.uk or by writing to us at Collingwood Buildings, 38 Collingwood Street, Newcastle upon Tyne, NE1 1JF.",
     },
 ];
 
@@ -48,8 +48,8 @@ export default function PrivacyPolicy() {
     return (
         <>
             <Head>
-                <title>Privacy Policy | Week2Week Serviced Apartments</title>
-                <meta name="description" content="Week2Week's Privacy Policy — how we collect, use, and protect your personal data in accordance with UK GDPR." />
+                <title>Privacy Policy | Ideal home Serviced Apartments</title>
+                <meta name="description" content="Ideal home's Privacy Policy — how we collect, use, and protect your personal data in accordance with UK GDPR." />
             </Head>
 
             {/* Hero */}

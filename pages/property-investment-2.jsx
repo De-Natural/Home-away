@@ -3,6 +3,7 @@ import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
 import imageCenter from "../assets/images/property2.png";
 import imageCenter2 from "../assets/images/property management2.png";
+import imageCenter3 from "../assets/images/Suite B 7.jpg";
 
 export default function PropertyInvestment() {
     const managementServices = [
@@ -46,8 +47,8 @@ export default function PropertyInvestment() {
             {/* Hero Section */}
             <section
                 className="w-full h-[350px] md:h-[450px] bg-cover bg-center flex items-center justify-center relative mt-[90px] md:mt-[120px]"
-                    style={{ backgroundImage: `url('${imageCenter.src}')` }}
-                >
+                style={{ backgroundImage: `url('${imageCenter3.src}')` }}
+            >
                 <div className="absolute inset-0 bg-black/50" />
                 <h1 className="relative z-10 font-heading text-4xl md:text-5xl font-bold text-white text-center px-6 drop-shadow-lg">
                     Maximize Your Property's Potential

@@ -17,7 +17,7 @@ export default function GatesheadQuays() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Gateshead Quays | Week2Week</title>
+                <title>Serviced Apartments Gateshead Quays |Ideal home </title>
                 <meta name="description" content="Modern serviced apartments at Gateshead Quays. Stunning riverfront location with easy access to the Sage, BALTIC, and Newcastle." />
             </Head>
 

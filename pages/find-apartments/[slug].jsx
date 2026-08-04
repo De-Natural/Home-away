@@ -306,7 +306,7 @@ export default function ApartmentDetail({ apartment }) {
     return (
         <>
             <Head>
-                <title>{apartment.title} | Ideal Home</title>
+                <title>{`${apartment.title} | Ideal home`}</title>
                 <meta name="description" content={apartment.excerpt} />
             </Head>
 

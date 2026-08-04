@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../../assets/images/companylogo.jpg'
+import logo from '../../assets/images/MainCompanyLogo.png'
 import { Icon } from '@iconify/react';
 import toast from "react-hot-toast";
 import Image from "next/image";

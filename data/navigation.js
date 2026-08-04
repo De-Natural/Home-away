@@ -30,7 +30,7 @@ export const whatWeDo = [
 
 export const company = [
     { label: "Trusted Partners", href: "/trusted-partners" },
-    { label: "Who We Are", href: "/week2week-apartments-about-us" },
+    { label: "Who We Are", href: "/ideal-home-apartments-about-us" },
     { label: "Testimonials", href: "/feedback-form-and-reviews" },
     { label: "Blog", href: "/blog" },
     { label: "Privacy Policy", href: "/privacy-policy" },
@@ -53,7 +53,7 @@ export const footerApartments = [
 ];
 
 export const footerCompany = [
-    { label: "Who We Are", href: "/week2week-apartments-about-us" },
+    { label: "Who We Are", href: "/ideal-home-apartments-about-us" },
     { label: "Serviced Apartments", href: "/serviced-apartments" },
     { label: "Ideal home's FAQ's", href: "/feedback-form-and-reviews" },
     { label: "Contractor Accommodation", href: "/contractor-accommodation" },
@@ -81,27 +81,27 @@ export const bottomLinks = [
 export const socialLinks = [
     {
         label: "Facebook",
-        href: "https://www.facebook.com/week2weekservicedapartments",
+        href: "https://www.facebook.com/idealhomeservicedapartments",
         icon: "facebook",
     },
     {
         label: "X",
-        href: "https://x.com/Week2Week",
+        href: "https://x.com/IdealHome",
         icon: "x",
     },
     {
         label: "LinkedIn",
-        href: "https://www.linkedin.com/company/week2week-serviced-apartments",
+        href: "https://www.linkedin.com/company/idealhome-serviced-apartments",
         icon: "linkedin",
     },
     {
         label: "Instagram",
-        href: "https://www.instagram.com/week2week/",
+        href: "https://www.instagram.com/idealhome/",
         icon: "instagram",
     },
     {
         label: "TikTok",
-        href: "https://www.tiktok.com/@week2week",
+        href: "https://www.tiktok.com/@idealhome",
         icon: "tiktok",
     },
 ];

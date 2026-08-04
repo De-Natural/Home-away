@@ -7,7 +7,7 @@ const siteMap = [
         category: "Main Pages",
         links: [
             { label: "Home", href: "/" },
-            { label: "About Us", href: "/week2week-apartments-about-us" },
+            { label: "About Us", href: "/ideal-home-apartments-about-us" },
             { label: "Find Apartments", href: "/find-apartments" },
             { label: "Contact Us", href: "/contact" },
         ],

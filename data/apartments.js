@@ -1,15 +1,15 @@
-import image1 from "../assets/images/dinner.png";
-import image2 from "../assets/images/add1.png";
-import image3 from "../assets/images/add2.png";
-import image4 from "../assets/images/add3.png";
-import image5 from "../assets/images/add4.png";
-import image6 from "../assets/images/homeaway7.png";
+import image1 from "../assets/images/walsall-1.jpg";
+import image2 from "../assets/images/walsall-10.jpg"; 
+import image3 from "../assets/images/walsall-18.jpg";
+import image4 from "../assets/images/cosy-1.jpg";
+import image5 from "../assets/images/walsall-3.jpg";
+import image6 from "../assets/images/Suit A 2.jpg";
 import image7 from "../assets/images/home-away-11.png";
-import image8 from "../assets/images/homeAwaykitchen2.png";
+import image8 from "../assets/images/cosy-9.jpg";
 import image9 from "../assets/images/homeAway10.png";
-import image10 from "../assets/images/veranda.png";
-import image11 from "../assets/images/bedroom2.jpg";
-import image12 from "../assets/images/bedroom3.jpg";
+import image10 from "../assets/images/Suite B 8.jpg";
+import image11 from "../assets/images/cosy-16.jpg";
+import image12 from "../assets/images/Suit A 3 - Copy (2).jpg";
 
 export const apartments = [
     {

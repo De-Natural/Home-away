@@ -55,7 +55,7 @@ export default function ESG() {
                 <SectionHeading title="Doing Business the Right Way" />
                 <div className="space-y-5 text-gray-600 font-body text-sm md:text-base leading-relaxed mt-8">
                     <p>
-                        At Week2Week, we believe that a successful business must be a responsible one. After 25+ years in the
+                        At Ideal home, we believe that a successful business must be a responsible one. After 25+ years in the
                         serviced apartment industry, we understand that our success is deeply intertwined with the wellbeing
                         of our people, our community, and our environment.
                     </p>

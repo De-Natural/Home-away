@@ -2,13 +2,13 @@ import Head from "next/head";
 import { apartments } from "../data/apartments";
 import ApartmentSearch from "../components/ui/ApartmentSearch";
 import ApartmentCard from "../components/ui/ApartmentCard";
-import CoverImage from "../assets/images/home-away-11.png";
+import CoverImage from "../assets/images/Suit A 2.jpg";  
 
 export default function FindApartments() {
     return (
         <>
             <Head>
-                <title>Find Apartments | Week2Week</title>
+                <title>Find Apartments | Ideal home</title>
             </Head>
 
             {/* Spacer for fixed header */}
@@ -17,7 +17,7 @@ export default function FindApartments() {
             {/* Banner */}
             <section
                 className="relative h-[250px] md:h-[350px] bg-cover bg-center flex items-center justify-center pt-10 bg-primary-dark"
-                style={{ backgroundImage: `url(${CoverImage.src})` }}
+                style={{ backgroundImage: `url('${CoverImage.src}')` }}
             >
                 <div className="absolute inset-0 bg-black/30" />
                 <h1 className="relative z-10 text-white font-heading font-bold text-3xl md:text-5xl lg:text-3xl text-center drop-shadow-lg">

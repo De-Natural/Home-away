@@ -4,11 +4,11 @@ import Button from "../../components/ui/Button";
 import imageCenter2 from "../../assets/images/costomersays.png"; 
 
 const milestones = [
-    { year: "2018", event: "Week2Week became an official charity partner of CHUF" },
+    { year: "2018", event: "Ideal home became an official charity partner of CHUF" },
     { year: "2019", event: "First annual fundraising gala dinner raising £12,000 for the unit" },
     { year: "2020", event: "Guests donate over 500 items to CHUF family support packages" },
     { year: "2021", event: "Staff complete the Great North Run raising over £8,500" },
-    { year: "2022", event: "Week2Week total donation milestone reaches £50,000" },
+    { year: "2022", event: "Ideal home total donation milestone reaches £50,000" },
     { year: "2023", event: "CHUF family accommodation partnership launched" },
     { year: "2024", event: "Continued support with events, donations, and guest-facing initiatives" },
 ];
@@ -18,7 +18,7 @@ export default function SupportingChuf() {
         <>
             <Head>
                 <title>Supporting CHUF — Children's Heart Unit Fund | Ideal home</title>
-                <meta name="description" content="Week2Week's ongoing partnership with CHUF — the Children's Heart Unit Fund at the Freeman Hospital, Newcastle." />
+                <meta name="description" content="Ideal home's ongoing partnership with CHUF — the Children's Heart Unit Fund at the Freeman Hospital, Newcastle." />
             </Head>
 
             {/* Hero */}
@@ -44,7 +44,7 @@ export default function SupportingChuf() {
                         in Newcastle, the unit is one of the busiest paediatric cardiac centres in the UK.
                     </p>
                     <p>
-                        Week2Week has been a proud and passionate supporter of CHUF since 2018. We fundraise throughout the
+                        Ideal home has been a proud and passionate supporter of CHUF since 2018. We fundraise throughout the
                         year and encourage our guests, staff, and partners to get involved in supporting this incredible cause.
                     </p>
                 </div>
@@ -98,7 +98,7 @@ export default function SupportingChuf() {
                         <span className="text-7xl">💛</span>
                         <h3 className="font-heading text-2xl font-bold text-primary-dark">How You Can Help</h3>
                         <p className="font-body text-gray-600 text-sm leading-relaxed">
-                            When you stay with Week2Week, you're indirectly supporting CHUF. But you can also donate
+                            When you stay with Ideal home, you're indirectly supporting CHUF. But you can also donate
                             directly, take part in fundraising events, or simply spread the word.
                         </p>
                     </div>
@@ -133,7 +133,7 @@ export default function SupportingChuf() {
                 <div className="max-w-3xl mx-auto space-y-8">
                     <h2 className="font-heading text-3xl font-bold italic">Every Stay Helps a Child's Heart</h2>
                     <p className="font-body text-gray-300 leading-relaxed">
-                        Book your stay with Week2Week and be part of something bigger. A portion of our effort
+                        Book your stay with Ideal home and be part of something bigger. A portion of our effort
                         and energy goes towards supporting CHUF and the remarkable children in their care.
                     </p>
                     <div className="flex justify-center gap-4 flex-wrap">

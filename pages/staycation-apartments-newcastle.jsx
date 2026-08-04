@@ -32,7 +32,7 @@ export default function StaycationNewcastle() {
     return (
         <>
             <Head>
-                <title>Staycation Apartments Newcastle | Week2Week</title>
+                <title>Staycation Apartments Newcastle | Ideal home</title>
             </Head>
 
             {/* Hero Section */}
@@ -61,7 +61,7 @@ export default function StaycationNewcastle() {
                         luxury of the Quayside to the leafy suburbs of Gosforth, you're never far from the action.
                     </p>
                     <p>
-                        Avoid the restrictions of a single hotel room. With a Week2Week apartment, you get
+                        Avoid the restrictions of a single hotel room. With a Ideal home apartment, you get
                         your own kitchen, living room, and private bedrooms. It's the perfect way to enjoy
                         quality time with family and friends while exploring everything the North East has to offer.
                     </p>

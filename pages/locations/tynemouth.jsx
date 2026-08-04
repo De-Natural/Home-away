@@ -17,7 +17,7 @@ export default function Tynemouth() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Tynemouth | Week2Week</title>
+                <title>Serviced Apartments Tynemouth | Ideal home</title>
                 <meta name="description" content="Coastal serviced apartments in Tynemouth. Beaches, surf, and village charm — perfect for a relaxing or working break." />
             </Head>
 

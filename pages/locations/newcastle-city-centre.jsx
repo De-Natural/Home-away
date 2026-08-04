@@ -1,8 +1,8 @@
 import Head from "next/head";
 import SectionHeading from "../../components/ui/SectionHeading";
 import Button from "../../components/ui/Button";
-import BgImage from "../../assets/images/BrownModern(2).png";
-import BgImage2 from "../../assets/images/add2.png";
+import BgImage from "../../assets/images/cosy-9.jpg";
+import BgImage2 from "../../assets/images/cosy-8.jpg";
 
 export default function NewcastleCityCentre() {
     const highlights = [
@@ -17,7 +17,7 @@ export default function NewcastleCityCentre() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Newcastle City Centre | Week2Week</title>
+                <title>Serviced Apartments Newcastle City Centre | Ideal home</title>
                 <meta name="description" content="Premium serviced apartments in the heart of Newcastle City Centre. Ideal for business stays, leisure, and long-term stays." />
             </Head>
 

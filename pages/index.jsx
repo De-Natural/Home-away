@@ -1,5 +1,5 @@
 // index.jsx
-// Homepage — assembles all homepage sections in order matching week2week.co.uk.
+// Homepage — assembles all homepage sections in order matching Ideal home.co.uk.
 
 import Head from "next/head";
 import HeroSection from "../components/sections/HeroSection";
@@ -34,7 +34,7 @@ export default function Home() {
             <WhyChoose heading={<SectionHeading className="mb-10">Why Choose Ideal home</SectionHeading>} />
             <Testimonials />
             <PropertyManagement />
-            <Accreditations />
+            {/* <Accreditations /> */}
             <LatestNews />
         </>
     );
