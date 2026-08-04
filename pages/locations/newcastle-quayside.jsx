@@ -17,7 +17,7 @@ export default function NewcastleQuayside() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Newcastle Quayside | Week2Week</title>
+                <title>Serviced Apartments Newcastle Quayside | Ideal Home</title>
                 <meta name="description" content="Stunning serviced apartments on the Newcastle Quayside. Iconic views, world-class dining, and vibrant culture on your doorstep." />
             </Head>
 

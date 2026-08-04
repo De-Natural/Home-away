@@ -20,7 +20,7 @@ export default function WelcomeSection() {
                             stays, so whether you are looking for a few days, weeks, or months;
                             for business or leisure, we have the perfect serviced apartment for
                             you. Our hand-picked apartments are in popular locations in and
-                            around Newcastle city centre. A warm welcome awaits at Week 2 Week
+                            around Newcastle city centre. A warm welcome awaits at Ideal home
                             Serviced Apartments.
                         </p>
                     </div>

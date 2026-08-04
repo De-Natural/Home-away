@@ -1,7 +1,7 @@
 import Head from "next/head";
 import SectionHeading from "../components/ui/SectionHeading";
 import Button from "../components/ui/Button";
-import imageCenter from "../assets/images/property4.png";
+import imageCenter from "../assets/images/cosy-15.jpg";
 import imageCenter2 from "../assets/images/contact us2.png";
 
 export default function TrustedPartners() {
@@ -54,7 +54,7 @@ export default function TrustedPartners() {
                 <SectionHeading title="Built on Trust for Over 25 Years" />
                 <div className="space-y-6 text-body-text font-body text-sm md:text-base leading-relaxed text-gray-600 mt-8">
                     <p>
-                        At Week2Week, we believe that trust is the foundation of every successful stay.
+                        At ideal home we believe that trust is the foundation of every successful stay.
                         As Newcastle's original serviced apartment provider, we've spent over a quarter
                         of a century building a reputation for excellence, reliability, and care.
                     </p>

@@ -2,7 +2,7 @@ import Head from "next/head";
 import SectionHeading from "../../components/ui/SectionHeading";
 import Button from "../../components/ui/Button";
 import BgImage from "../../assets/images/BrownModern(1).png";
-import BgImage2 from "../../assets/images/add3.png";
+import BgImage2 from "../../assets/images/walsall-1.jpg";
 
 export default function Jesmond() {
     const highlights = [
@@ -17,7 +17,7 @@ export default function Jesmond() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Jesmond Newcastle | Week2Week</title>
+                <title>Serviced Apartments Jesmond Newcastle | Ideal home</title>
                 <meta name="description" content="Stylish serviced apartments in Jesmond, Newcastle's most desirable neighbourhood. Short and long stays welcome." />
             </Head>
 

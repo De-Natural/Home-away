@@ -3,7 +3,7 @@ import SectionHeading from "../components/ui/SectionHeading";
 import ApartmentSearch from "../components/ui/ApartmentSearch";
 import Button from "../components/ui/Button";
 import mobilityImage from "../assets/images/Global mobility.png";
-import image1 from "../assets/images/image-337.png";  
+import image1 from "../assets/images/walsall-3.jpg";  
 
 export default function Relocation() {
     const relocationBenefits = [
@@ -32,7 +32,7 @@ export default function Relocation() {
     return (
         <>
             <Head>
-                <title>Relocation & Global Mobility Accommodation Newcastle | Week2Week</title>
+                <title>Relocation & Global Mobility Accommodation Newcastle | Ideal home</title>
             </Head>
 
             {/* Hero Section */}
@@ -57,7 +57,7 @@ export default function Relocation() {
                 <div className="space-y-6 text-body-text font-body text-sm md:text-base leading-relaxed text-gray-600 mt-8">
                     <p>
                         Relocating can be a stressful experience, whether you're moving for work, study, or
-                        finding a new family home. Week2Week Serviced Apartments provides a stable and
+                        finding a new family home. Ideal home Serviced Apartments provides a stable and
                         welcoming base for individuals and families during their transition to Newcastle
                         and the surrounding areas.
                     </p>

@@ -16,7 +16,7 @@ const reviews = [
         rating: 5,
         date: "January 2025",
         location: "Jesmond",
-        text: "Week2Week have been our go-to for contractor accommodation for over 3 years. The quality is consistently excellent and the pricing is very competitive. Highly recommended.",
+        text: "Ideal home have been our go-to for contractor accommodation for over 3 years. The quality is consistently excellent and the pricing is very competitive. Highly recommended.",
     },
     {
         name: "Linda & David K.",
@@ -37,7 +37,7 @@ const reviews = [
         rating: 5,
         date: "October 2024",
         location: "Gateshead Quays",
-        text: "We booked 4 apartments simultaneously for our project team. Week2Week handled everything seamlessly – the admin was straightforward and the accommodation was superb.",
+        text: "We booked 4 apartments simultaneously for our project team. Ideal home handled everything seamlessly – the admin was straightforward and the accommodation was superb.",
     },
     {
         name: "Emma J.",

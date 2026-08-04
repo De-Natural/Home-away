@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useState } from "react";
 import ApartmentSearch from "../components/ui/ApartmentSearch";
 import SectionHeading from "../components/ui/SectionHeading";
-import CoverImage from "../assets/images/house_model_modern_architecture.png";
+import CoverImage from "../assets/images/walsall-16.jpg";
 import LeisureImg from "../assets/images/LeisureImage.png";
 import BusinessImg from "../assets/images/business-image.avif";
 import CorporateImg from "../assets/images/cooperate-group-image.png";
@@ -25,9 +25,9 @@ export default function ServicedApartments() {
             label: "Leisure 🧳",
             title: "Apartments for Leisure",
             text: [
-                "If you are considering a much-needed leisure break in the Newcastle upon Tyne area either alone, with a partner or with your family, then Week2Week can provide you with a beautiful apartment that will meet your needs. We have apartments close by to all of the local attractions at the centre of it all.",
+                "If you are considering a much-needed leisure break in the Newcastle upon Tyne area either alone, with a partner or with your family, then Ideal home can provide you with a beautiful apartment that will meet your needs. We have apartments close by to all of the local attractions at the centre of it all.",
                 "Our serviced apartments provide you with a home from home feel coupled with the benefits of a luxury hotel giving you the advantages of both experiences.",
-                "Week2Week Serviced Apartments offer a range of 1, 2, 3 and 4 – 5 bedroom options all with ample space and additional rooms you wouldn't usually get when staying at a hotel and all for affordable prices."
+                "Ideal home Serviced Apartments offer a range of 1, 2, 3 and 4 – 5 bedroom options all with ample space and additional rooms you wouldn't usually get when staying at a hotel and all for affordable prices."
             ],
             image: LeisureImg
         },
@@ -104,7 +104,7 @@ export default function ServicedApartments() {
                     </p>
                     <p>
                         Including furnishings, maid service and amenities that go above and beyond that of a hotel, a
-                        fully serviced apartment from Week2Week is the logical, cost effective choice for short or long
+                        fully serviced apartment from Ideal home is the logical, cost effective choice for short or long
                         stays no matter your reason for visiting the <strong>north east</strong> of England or any worldwide cities in
                         our reach.
                     </p>

@@ -1,5 +1,6 @@
-// week2week-apartments-about-us.jsx
+// Ideal home-apartments-about-us.jsx
 import Head from "next/head";
+import Image from "next/image";
 import ApartmentSearch from "../components/ui/ApartmentSearch";
 import SectionHeading from "../components/ui/SectionHeading";
 import Accreditations from "../components/sections/Accreditations";
@@ -40,7 +41,7 @@ export default function AboutUs() {
                         </svg>
                     </div>
                     <p>
-                        Week2Week Serviced Accommodation was established over 24 years ago and is the original serviced
+                        Ideal Home Serviced Accommodation was established over 24 years ago and is the original serviced
                         accommodation provider based in Newcastle. We are a Gold Standard Quality Accredited Company,
                         offering high quality hotel alternative accommodation, in key locations in and around Newcastle city
                         centre and across the UK via our partner networks.
@@ -51,7 +52,7 @@ export default function AboutUs() {
                         guest support.
                     </p>
                     <p>
-                        Week2Week accommodate short, mid and extended stays for both business and leisure travellers. We
+                        Ideal home serviced apartments accommodate short, mid and extended stays for both business and leisure travellers. We
                         offer a flexible booking policy, giving guests added peace of mind. Over recent years, we have become
                         the preferred 'home from home' choice of accommodation for corporate travellers, contractors and
                         relocations as our apartments and houses provide the perfect blend of workspace and relaxation.
@@ -85,7 +86,7 @@ export default function AboutUs() {
                         went out of their way to help in any way possible and would recommend them
                         to anyone"
                     </h2>
-                    <p className="text-white/80 font-body text-sm">Week2Week Corporate Client</p>
+                    <p className="text-white/80 font-body text-sm">ideal home Corporate Client</p>
                 </div>
             </section>
 
@@ -93,7 +94,7 @@ export default function AboutUs() {
             <section className="py-20 max-w-container mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <p className="text-gray-500 font-body leading-relaxed">
-                        Week2Week Serviced Apartments is about more than our range of prime location
+                        ideal home serviced apartments is about more than our range of prime location
                         apartments in the North East of England. It's the people behind the scenes who give us our
                         unique approach to accommodation.
                     </p>
@@ -102,15 +103,35 @@ export default function AboutUs() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
                     {teamMembers.map((member, idx) => (
                         <div key={idx} className="flex flex-col">
-                            {/* Member Image placeholder (using a subtle gray box if image fails) */}
-                            <div className="aspect-[4/3] w-full bg-gray-200 mb-8 rounded-sm overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${member.image})` }} />
+                            {/* Member Image */}
+                            <div className="aspect-[4/3] w-full bg-gray-200 mb-6 rounded-sm overflow-hidden relative">
+                                {member.image && (
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name || "Team Member"}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                )}
+                            </div>
+
+                            {member.name && (
+                                <h3 className="text-xl font-bold font-heading text-primary-dark mb-1">{member.name}</h3>
+                            )}
+                            {member.role && (
+                                <p className="text-sm font-semibold text-primary mb-4">{member.role}</p>
+                            )}
 
                             <div className="space-y-6 text-body-text font-body text-sm leading-relaxed">
-                                {member.bio.map((para, pIdx) => (
+                                {member.bio && member.bio.map((para, pIdx) => (
                                     <p key={pIdx} dangerouslySetInnerHTML={{ __html: para }} />
                                 ))}
-                                <p className="font-bold">Fun Facts:</p>
-                                <p>{member.funFacts}</p>
+                                {member.funFacts && (
+                                    <>
+                                        <p className="font-bold mb-0">Fun Facts:</p>
+                                        <p>{member.funFacts}</p>
+                                    </>
+                                )}
                             </div>
                         </div>
                     ))}
@@ -118,7 +139,7 @@ export default function AboutUs() {
             </section>
 
             {/* Accreditations */}
-            <Accreditations />
+            {/* <Accreditations /> */}
         </>
     );
 }

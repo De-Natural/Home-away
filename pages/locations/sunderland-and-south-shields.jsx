@@ -17,7 +17,7 @@ export default function SunderlandAndSouthShields() {
     return (
         <>
             <Head>
-                <title>Serviced Apartments Sunderland & South Shields | Week2Week</title>
+                <title>Serviced Apartments Sunderland & South Shields | Ideal home</title>
                 <meta name="description" content="Quality serviced apartments in Sunderland and South Shields. Ideal for business, leisure, and long-term stays in the North East." />
             </Head>
 

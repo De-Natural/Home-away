@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Button from "../components/ui/Button";
-import blogImg1 from "../assets/images/cooperate-group-image.png";
-import blogImg2 from "../assets/images/FreelanceCreative PortfolioWebsite(5).png";
+import blogImg1 from "../assets/images/walsall-16.jpg";
+import blogImg2 from "../assets/images/walsall-8.jpg";
 import blogImg3 from "../assets/images/hospital.png";
 import blogImg4 from "../assets/images/homeAway10.png";
 import blogImg5 from "../assets/images/homeAwaykitchen2.png";
 import blogImg6 from "../assets/images/FreelanceCreative PortfolioWebsite(6).png";
-import heroBg from "../assets/images/FreelanceCreative PortfolioWebsite(4).png";
+import heroBg from "../assets/images/cosy-14.jpg";
 
 const posts = [
     {
@@ -117,7 +117,7 @@ export default function Blog() {
                     </div>
 
                     {/* Pagination */}
-                    <nav
+                    {/* <nav
                         className="mt-16 flex items-center justify-center font-body text-sm"
                         aria-label="Blog pagination"
                     >
@@ -132,7 +132,7 @@ export default function Blog() {
                         <a href="#" className="text-primary hover:text-primary-dark px-2 font-semibold transition-colors">
                             Next page
                         </a>
-                    </nav>
+                    </nav> */}
                 </div>
             </section>
 

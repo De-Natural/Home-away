@@ -41,7 +41,7 @@ export default function HospitalStays() {
     return (
         <>
             <Head>
-                <title>Hospital Stays & Patient Support Accommodation Newcastle | Week2Week</title>
+                <title>Hospital Stays & Patient Support Accommodation Newcastle | Ideal home</title>
             </Head>
 
             {/* Hero Section */}
@@ -65,7 +65,7 @@ export default function HospitalStays() {
                 <SectionHeading title="A Compassionate Home Away From Home" />
                 <div className="space-y-6 text-body-text font-body text-sm md:text-base leading-relaxed text-gray-600 mt-8">
                     <p>
-                        Week2Week Serviced Apartments offers a comfortable and flexible alternative to hotel
+                        Ideal home Serviced Apartments offers a comfortable and flexible alternative to hotel
                         accommodation for those requiring a stay near Newcastle's major hospitals.
                         We provide the extra space and privacy that patients and their families need
                         during medical treatments or recovery.

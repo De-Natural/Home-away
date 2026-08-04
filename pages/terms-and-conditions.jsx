@@ -4,11 +4,11 @@ import SectionHeading from "../components/ui/SectionHeading";
 const sections = [
     {
         title: "1. Introduction",
-        content: "These Terms and Conditions govern your use of the Week2Week Serviced Apartments website and our booking services. By accessing our website or making a booking, you agree to be bound by these terms. Please read them carefully before proceeding.",
+        content: "These Terms and Conditions govern your use of the Ideal home Serviced Apartments website and our booking services. By accessing our website or making a booking, you agree to be bound by these terms. Please read them carefully before proceeding.",
     },
     {
         title: "2. Bookings & Reservations",
-        content: "All reservations are subject to availability and confirmation by Week2Week. A booking is only confirmed once you have received written confirmation from us. We reserve the right to refuse any booking at our discretion. A deposit may be required to secure your reservation.",
+        content: "All reservations are subject to availability and confirmation by Ideal home. A booking is only confirmed once you have received written confirmation from us. We reserve the right to refuse any booking at our discretion. A deposit may be required to secure your reservation.",
     },
     {
         title: "3. Pricing & Payment",
@@ -16,7 +16,7 @@ const sections = [
     },
     {
         title: "4. Cancellation Policy",
-        content: "Cancellations must be made in writing to hello@week2week.co.uk. Our standard cancellation policy requires a minimum of 7 days' notice for a full refund. Cancellations made with less than 7 days' notice may be subject to a cancellation charge equivalent to one week's rental. Extended stay bookings may be subject to different cancellation terms as specified at the time of booking.",
+        content: "Cancellations must be made in writing to hello@idealhome.co.uk. Our standard cancellation policy requires a minimum of 7 days' notice for a full refund. Cancellations made with less than 7 days' notice may be subject to a cancellation charge equivalent to one week's rental. Extended stay bookings may be subject to different cancellation terms as specified at the time of booking.",
     },
     {
         title: "5. Arrival & Departure",
@@ -28,7 +28,7 @@ const sections = [
     },
     {
         title: "7. Liability",
-        content: "Week2Week accepts no liability for any loss, damage, theft, or injury to guests or their personal property during their stay, except where such liability cannot be excluded by law. Guests are strongly advised to obtain appropriate travel and personal property insurance prior to their stay.",
+        content: "Ideal home accepts no liability for any loss, damage, theft, or injury to guests or their personal property during their stay, except where such liability cannot be excluded by law. Guests are strongly advised to obtain appropriate travel and personal property insurance prior to their stay.",
     },
     {
         title: "8. Privacy",
@@ -40,7 +40,7 @@ const sections = [
     },
     {
         title: "10. Contact",
-        content: "If you have any questions about these Terms and Conditions, please contact us at hello@week2week.co.uk or call us on 0191 261 4600.",
+        content: "If you have any questions about these Terms and Conditions, please contact us at hello@idealhome.co.uk or call us on 0191 261 4600.",
     },
 ];
 
@@ -48,8 +48,8 @@ export default function TermsAndConditions() {
     return (
         <>
             <Head>
-                <title>Terms & Conditions | Week2Week Serviced Apartments</title>
-                <meta name="description" content="Terms and Conditions for Week2Week Serviced Apartments — bookings, cancellations, payments, and property use policies." />
+                <title>Terms & Conditions | Ideal home Serviced Apartments</title>
+                <meta name="description" content="Terms and Conditions for Ideal home Serviced Apartments — bookings, cancellations, payments, and property use policies." />
             </Head>
 
             {/* Hero */}

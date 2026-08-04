@@ -63,7 +63,7 @@ export default function GuestPerks() {
     return (
         <>
             <Head>
-                <title>Guest Perks & Exclusive Discounts Newcastle | Week2Week</title>
+                <title>Guest Perks & Exclusive Discounts Newcastle | Ideal home</title>
             </Head>
 
             {/* Hero Section */}
@@ -82,7 +82,7 @@ export default function GuestPerks() {
                 <SectionHeading title="More Than Just a Place to Stay" />
                 <div className="space-y-6 text-body-text font-body text-sm md:text-base leading-relaxed text-gray-600 mt-8">
                     <p>
-                        At Week2Week, we want your stay in Newcastle to be truly memorable. That's why we go
+                        At Ideal home, we want your stay in Newcastle to be truly memorable. That's why we go
                         above and beyond to provide extra value through our handpicked guest perks.
                     </p>
                     <p>
@@ -117,7 +117,7 @@ export default function GuestPerks() {
             <section className="py-24 bg-white">
                 <div className="max-w-container mx-auto px-6">
                     <div className="text-center mb-16 space-y-4">
-                        <h2 className="font-heading text-3xl font-bold text-primary-dark italic">"Week2Week Perks"</h2>
+                        <h2 className="font-heading text-3xl font-bold text-primary-dark italic">"Ideal home Perks"</h2>
                         <p className="font-body text-gray-600 max-w-2xl mx-auto">
                             Unlock exclusive discounts and experiences across the North East by staying with us.
                         </p>

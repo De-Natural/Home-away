@@ -2,7 +2,7 @@ import Head from "next/head";
 import SectionHeading from "../components/ui/SectionHeading";
 import ApartmentSearch from "../components/ui/ApartmentSearch";
 import Button from "../components/ui/Button";
-import corporateImage from "../assets/images/cooperate-group-image.png";
+import corporateImage from "../assets/images/walsall-17.jpg";
 import image1 from "../assets/images/homeaway7.png";
 
 export default function CorporateStays() {
@@ -32,7 +32,7 @@ export default function CorporateStays() {
     return (
         <>
             <Head>
-                <title>Corporate Stays & Business Travel Newcastle | Week2Week</title>
+                <title>Corporate Stays & Business Travel Newcastle | Ideal home</title>
             </Head>
 
             {/* Hero Section */}
@@ -56,7 +56,7 @@ export default function CorporateStays() {
                 <SectionHeading title="Corporate Accommodation Solutions" />
                 <div className="space-y-6 text-body-text font-body text-sm md:text-base leading-relaxed text-gray-600 mt-8">
                     <p>
-                        Week2Week Serviced Apartments has been a trusted partner for corporate travel managers,
+                        Ideal home Serviced Apartments has been a trusted partner for corporate travel managers,
                         HR teams, and SMEs for over 20 years. We provide high-quality, fully furnished accommodation
                         that serves as a superior alternative to traditional hotels.
                     </p>
@@ -128,7 +128,7 @@ export default function CorporateStays() {
                     <p className="font-body text-gray-600 leading-relaxed">
                         For businesses with frequent travel requirements, we offer dedicated account management
                         and tailored booking portals. Contact our corporate team today to discuss your
-                        specific needs and discover the Week2Week difference.
+                        specific needs and discover the Ideal home difference.
                     </p>
                     <Button href="/contact">Enquire About Corporate Rates</Button>
                 </div>

@@ -191,7 +191,7 @@ export default function Contact() {
                     <p className="font-body text-gray-600">No 31 copper walks way walsall ws1 2nd</p>
                     <div className="w-full h-[400px] rounded-sm overflow-hidden shadow-lg bg-gray-200 flex items-center justify-center">
                         <iframe
-                            title="Week2Week Office Location"
+                            title="Ideal home Office Location"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}

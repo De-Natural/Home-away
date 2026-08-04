@@ -47,7 +47,7 @@ export default function ContractorAccommodation() {
                 </h3>
                 <div className="space-y-6 text-body-text font-body text-sm md:text-base leading-relaxed text-gray-600">
                     <p>
-                        At Week2Week we have many years' experience in sourcing national accommodation for contractors
+                        At Ideal home we have many years' experience in sourcing national accommodation for contractors
                         and project managers for stays ranging from as little as one week to as long as several years.
                     </p>
                     <p>
@@ -113,7 +113,7 @@ export default function ContractorAccommodation() {
             <section className="bg-primary-dark py-24 px-6 text-center">
                 <div className="max-w-4xl mx-auto">
                     <h2 className="text-white font-heading font-semibold text-2xl md:text-3xl italic leading-relaxed mb-10">
-                        "We have used Week2Week for many years to house our project teams. The cost savings compared
+                        "We have used Ideal home for many years to house our project teams. The cost savings compared
                         to hotels are substantial, but more importantly, the morale of our staff is much higher
                         when they have a 'home' to go back to. Their service is second to none."
                     </h2>

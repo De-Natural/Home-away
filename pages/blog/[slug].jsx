@@ -121,7 +121,7 @@ export default function BlogPost({ slug }) {
     return (
         <>
             <Head>
-                <title>{post.title} | Ideal home Blog</title>
+                <title>{`${post.title} | Ideal home Blog`}</title>
                 <meta name="description" content={post.content[0]} />
             </Head>
 
